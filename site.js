@@ -711,7 +711,7 @@ Object.extend(String.prototype, (function() {
   }
 
   function unfilterJSON(filter) {
-    return this.replace(filter || Prototype.JSONFilter, '$1');
+    return this.replace(filter || site.jsONFilter, '$1');
   }
 
   function isJSON() {
