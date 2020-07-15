@@ -1,0 +1,686 @@
+
+html {
+	margin:0px;
+	font-family:sans-serif;
+	font-size:1em;
+	height:100%;
+	background:url(images/bg.png) #ccc 50% 0px repeat-y;
+}
+
+body {
+	margin:0px;
+	font-size:0.8em;
+	line-height:1.8em;
+	height:100%;
+}
+
+img { border:none; }
+
+li { margin-bottom:8px; }
+
+#site { position:relative; width:1070px; margin:auto; }
+
+#mainmenu { position:relative; z-index:9;list-style-type:none;margin:0px 11px 0px 11px;padding:0px;float:right; }
+#mainmenu li { list-style-type:none;margin:5px;padding:0px;float:left; }
+
+#sidebar { position:absolute;left:0px; width:160px; }
+#sidebar li { list-style:none; margin:0px; padding:0px; }
+#sidebar ul { list-style:none;margin:0px; padding-left:0px; }
+#sidebar ul ul { list-style:none;margin:0px; padding-left:10px; }
+
+#rightpane {
+	position:absolute;
+	right:0px;
+	width:880px;
+}
+
+#content {
+	position:relative;
+	margin:15px 0px;
+	min-height:400px;
+	clear:both;
+}
+
+#PageTitle {
+	font-size:1.5em;
+	line-height:1.1em;
+	font-weight:bold;
+	background:transparent;
+	border:none;
+	width:100%;
+	margin:0px 0px 10px 0px;
+}
+
+#ErrorA {
+	top:50%;
+	position:relative;
+	height:auto;
+}
+
+#ErrorB {
+	border-top:1px solid #A5D0E7;
+	border-bottom:1px solid #A5D0E7;
+	background:#e2f4ff;
+	color:#02455B;
+	margin:0px;
+	text-align:center;
+	position:relative;
+	top:-55px;
+}
+
+#ErrorC {
+	padding:15px;
+	border-top:1px solid #fff;
+	border-bottom:1px solid #fff;
+}
+
+#ErrorC h3, #ErrorC p { width:700px;margin:10px auto; }
+#ErrorC h3 { font-size:2.2em; }
+#ErrorC p {  font-size:1.5em; color:#076c8e; }
+
+form {
+	margin:0px;
+	padding:0px;
+}
+
+#PageOptions {
+	float:right;
+	margin:15px 0px 0px 0px;
+	padding:0px;
+}
+
+#PageOptions a:hover {
+	background-color:#666;
+	border:2px solid #333;
+	-webkit-border-bottom-colors:#333 #fff #ccc;
+	-moz-border-bottom-colors:#333 #fff #ccc;
+	-webkit-border-top-colors:#333 #fff #ccc;
+	-moz-border-top-colors:#333 #fff #ccc;
+	-webkit-border-left-colors:#333 #fff #ccc;
+	-moz-border-left-colors:#333 #fff #ccc;
+	-webkit-border-right-colors:#333 #fff #ccc;
+	-moz-border-right-colors:#333 #fff #ccc;
+}
+
+#PageOptions a {
+	background-color:#999;
+	background-repeat:no-repeat;
+	background-position:50% 50%;
+	border:2px solid #ccc;
+	-webkit-border-bottom-colors:#ccc #fff #ccc;
+	-moz-border-bottom-colors:#ccc #fff #ccc;
+	-webkit-border-top-colors:#ccc #fff #ccc;
+	-moz-border-top-colors:#ccc #fff #ccc;
+	-webkit-border-left-colors:#ccc #fff #ccc;
+	-moz-border-left-colors:#ccc #fff #ccc;
+	-webkit-border-right-colors:#ccc #fff #ccc;
+	-moz-border-right-colors:#ccc #fff #ccc;
+	border-radius:5px;
+	cursor:pointer;
+	display:block;
+	float:right;
+	margin:2px;
+	padding:0px;
+	width:24px;
+	height:24px;
+}
+
+#PageOptions span { display:none; }
+
+.IconEdit   { background-image:url(images/icons/pencil.png); }
+.IconPrint  { background-image:url(images/icons/printer.png); }
+.IconLock   { background-image:url(images/icons/lock.png); }
+.IconUnlock { background-image:url(images/icons/lock_open.png); }
+
+#APIComponents h3 {
+	clear:both;
+	margin:0px;
+	padding:10px 0px 10px 0px;
+}
+
+#APIComponents ul {
+	margin:0px;
+	padding:0px;
+	list-style-type:none;
+}
+
+#APIComponents li {
+	margin:0px;
+	padding:5px;
+	float:left;
+}
+
+a, a:link, a:visited, a:active {
+	color:#6688aa;
+}
+
+a:hover {
+	color:#66aa88;
+}
+
+#footer {
+	text-align:center;
+	clear:both;
+}
+
+.WindowPaneInternal, #WindowClearPaneInternal {
+	border-Radius:15px;
+	text-align:right;
+	background:#f1f1f1;
+}
+
+.WindowPane, #WindowClearPane {
+	border-Radius:15px;
+	border:5px solid #e1e1e1;
+	background:#f1f1f1;
+	position:absolute;
+	z-index:101;
+	padding:5px;
+}
+
+.WindowPane { position:static; }
+
+input {
+	padding:6px;
+	font-size:15px;
+	outline:none;
+}
+
+#WindowClearPaneInternal #recaptcha_response_field,
+textarea, input[type=password], input[type=text], input[type=email] {
+	font-size:16px;
+	width:180px;
+	padding:4px;
+	background:white;
+	border:1px solid #bbb;
+	border-radius:5px;
+}
+
+#WindowClearPaneInternal #recaptcha_response_field:hover,
+textarea:hover, input[type=password]:hover, input[type=text]:hover, input[type=email]:hover {
+	border:1px solid #a8cbff;
+}
+
+#WindowClearPaneInternal #recaptcha_response_field:focus,
+textarea:focus, input[type=password]:focus, input[type=text]:focus, input[type=email]:focus {
+	border:1px solid #4fa7ff;
+	background:white url(images/in_fade.png) repeat-x;
+}
+
+#WindowClearPaneInternal #recaptcha_response_field {
+	bottom:-4px !important;
+	padding:4px !important;
+}
+
+#WindowClearPaneInternal .recaptcha_input_area {
+	margin-left: 70px!important
+}
+
+#WindowClearPaneInternal #recaptcha_reload_btn,
+#WindowClearPaneInternal #recaptcha_switch_audio_btn,
+#WindowClearPaneInternal #recaptcha_switch_img_btn,
+#WindowClearPaneInternal #recaptcha_whatsthis_btn {
+	display:block;
+	position:relative !important;
+	left:10px !important;
+	top:3px !important;
+}
+
+input[type=button], input[type=submit] {
+	color: #fef4e9;
+	font-size:14px;
+	border:1px solid #225577;
+	padding:3px 15px;
+	font-weight:bold;
+	background: #225577;
+	border-radius:5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#336688), to(#225577));
+	background: -moz-linear-gradient(top,  #336688,  #225577);
+}
+
+input[disabled][type=button], input[disabled][type=submit] {
+	color: #fef4e9;
+	font-size:14px;
+	border: solid 1px #666;
+	padding:3px 15px;
+	font-weight:bold;
+	background: #999;
+	border-radius:5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
+	background: -moz-linear-gradient(top,  #ccc,  #999);
+}
+
+input[disabled][type=button]:hover, input[disabled][type=submit]:hover {
+	background: #999;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ccc), to(#999));
+	background: -moz-linear-gradient(top,  #ccc,  #999);	
+}
+
+a.button_link {
+	text-decoration:none;
+	color: #fef4e9;
+	font-size:14px;
+	border: solid 1px #da7c0c;
+	padding:3px 15px;
+	font-weight:bold;
+	background: 225577;
+	border-radius:5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#225577), to(#336688));
+	background: -moz-linear-gradient(top,  #faa51a,  #336688);
+}
+
+a.button_link:hover {
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#225577), to(#336688));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+}
+
+input[type=button]:hover, input[type=submit]:hover {
+	background: #f47c20;
+	background: -webkit-gradient(linear, left top, left bottom, from(#225577), to(#336688));
+	background: -moz-linear-gradient(top,  #f88e11,  #f06015);
+}
+
+h3 {
+	color:#336688;
+	font-family:verdana;
+}
+
+h1,h2,h4,h5,h6 {
+	color:#111;
+	font-family:verdana;
+}
+
+li { padding:2px; margin:0px; }
+
+.Window h3 {
+	background:#336688;
+	color:white;
+	padding:10px;
+	margin:-10px -10px 10px -10px;
+	border-Radius:15px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border:5px solid #225577;
+	border-bottom:0px none #336688;
+	text-align:left;
+	position:relative;
+	top:-2px;
+}
+
+.error {
+	background:darkred;
+	color:white;
+	padding:7px;
+	font-weight:bold;
+	border-Radius:8px;
+	text-align:left;
+}
+
+.notice {
+	background:#336688;
+	color:white;
+	padding:7px;
+	border-Radius:8px;
+	text-align:left;
+	margin-bottom:10px;
+}
+
+form { margin:0px; padding:0px; }
+
+.WindowX {
+	position:absolute;
+	right:15px;
+	top:8px;
+	width:24px;
+	height:24px;
+	cursor:pointer;
+	background:url(images/close.png) no-repeat 0% 0%;
+}
+
+.cAvatar {
+	width:250px;
+	height:250px;
+	border-radius:15px;
+	border:1px solid #666;
+	box-shadow:2px 2px 5px #bbb;
+}
+
+.bAvatar {
+	width:75px;
+	height:75px;
+	border-radius:10px;
+	border:1px solid #666;
+	box-shadow:2px 2px 5px #bbb;
+}
+
+.aAvatar {
+	width:50px;
+	height:50px;
+	border-radius:7px;
+	border:1px solid #666;
+	box-shadow:2px 2px 5px #bbb;
+}
+
+.Note {
+	line-height:0.5em;
+	vertical-align:text-top;
+	font-size:0.45em;
+}
+
+.BNote {
+	line-height:normal;
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	font-size:10px;
+}
+
+.SubText { 
+	margin:15px;
+	font-size:11px;
+}
+
+p.SubText {
+	white-space:pre-wrap;
+}
+
+.scomment {
+	font-size:9px;
+	font-style:italic;
+	padding-right:5px;
+	margin-top:15px;
+}
+
+.auto_center { text-align:center; }
+
+td, th { padding:2px 5px; }
+
+td {
+	background:white;
+}
+
+#WindowClearPane td { background:transparent; }
+
+th:first-child { border-top-left-radius:10px; }
+th:last-child { border-top-right-radius:10px; }
+
+tr:first-child>*:first-child { border-top-left-radius:10px; }
+tr:first-child>*:last-child { border-top-right-radius:10px; }
+
+tr:last-child>*:first-child { border-bottom-left-radius:10px; }
+tr:last-child>*:last-child { border-bottom-right-radius:10px; }
+
+th {
+	background: 225577;
+	background: -webkit-gradient(linear, left top, left bottom, from(#225577), to(#336688));
+	background: -moz-linear-gradient(top,  #225577,  #336688);
+	color:white;
+}
+
+.SelectedPageBlock, .PageBlock {
+	display:block;
+	float:left;
+	border:1px solid #ccc;
+	border-radius:5px;
+	width:22px;
+	height:22px;
+	margin:4px;
+	text-align:center;
+	line-height:20px;
+	vertical-align:middle;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+a.SelectedPageBlock {
+	background:#225577;
+	border-color:#225577;
+	color:white;
+}
+
+.PostSection {
+	margin:2px;
+	text-align:left;
+	color:#225577;
+}
+
+#StatusForm div, #StatusForm label {
+	line-height:33px;
+	vertical-align:middle;
+}
+
+#ChangeLog a {
+	text-decoration:none;
+}
+
+#ChangeLog h2 {
+	position:relative;
+	border-bottom:1px solid #336688;
+	margin-top:25px;
+}
+
+.SmallUser {
+	font-size:11px;
+}
+
+.airItem { width:32px;height:32px; }
+
+.usernameCheck img { display:block; }
+
+.PlatformInfo { font-size:1.17em;font-weight:bold; color:#225577; }
+.PlatformInfo span { font-size:0.85em; font-weight:normal; color:black; }
+
+#recaptcha_area {
+	margin:auto;
+}
+
+#recaptcha_image {
+	background:white;
+	padding:5px;
+	border-radius:5px;
+	border:1px solid #225577;
+}
+
+.recipeDef img {
+	display:block;
+	border:none;
+}
+
+.recipeDef td {
+	background:#ddd;
+}
+
+.recipeDef table td {
+	background:#bbb;
+	padding:8px;
+}
+
+.infotable tbody,
+.infotable thead {
+	margin:0px;
+	padding:0px;
+}
+
+.infotable {
+	
+}
+
+.infotable thead td {
+	background:#336688;
+	color:white;
+	font-weight:bold;
+	border-top:2px solid #225577;
+	border-bottom:2px solid #225577;
+	border-radius:0px !important;
+}
+
+.infotable thead td:first-child {
+	border-left:2px solid #225577;
+}
+
+.infotable thead td:last-child {
+	border-right:2px solid #225577;
+}
+
+.infotable>tbody>tr>td {
+	border-radius:0px !important;
+	padding:5px 10px;
+	border-left:1px dashed #ccc;
+	border-top:1px dashed #ccc;
+}
+
+.infotable tbody td:first-child {
+	border-left:none;
+}
+
+.infotable tbody tr:first-child td {
+	border-top:none;
+}
+
+.guiIcon {
+	background:url(images/gui/iconsA.png) 0px 0px no-repeat;
+	width:32px;
+	height:32px;
+}
+
+.guiIconB {
+	background:url(images/gui/iconsB.png) 0px 0px no-repeat;
+	width:32px;
+	height:32px;
+}
+
+.guiIconC {
+	background:url(images/gui/iconsC.png) 0px 0px no-repeat;
+	width:32px;
+	height:32px;
+}
+
+.non_blocking {
+	background-position:0px 0px;
+}
+
+.blocking {
+	background-position:-32px 0px;
+}
+
+.dmg_25 {
+	background-position:-64px 0px;
+}
+
+.dmg_50 {
+	background-position:-96px 0px;
+}
+
+.dmg_75 {
+	background-position:-128px 0px;
+}
+
+.dmg_99 {
+	background-position:-160px 0px;
+}
+
+.dmg_ignore {
+	background-position:-192px 0px;
+}
+
+.dmg_whitelist {
+	background-position:-224px 0px;
+}
+
+.dmg_blacklist {
+	background-position:-256px 0px;
+}
+
+.dmg_write {
+	background-position:-288px 0px;
+}
+
+.dmg_read {
+	background-position:-320px 0px;
+}
+
+.dmg_readwrite {
+	background-position:-352px 0px;
+}
+
+.sort_up {
+	background-position:0px -32px;
+}
+
+.sort_down {
+	background-position:-32px -32px;
+}
+
+.sort_right {
+	background-position:-64px -32px;
+}
+
+.sort_left {
+	background-position:-96px -32px;
+}
+
+.sort_name {
+	background-position:0px -64px;
+}
+
+.sort_stack {
+	background-position:-32px -64px;
+}
+
+.sort_priority {
+	background-position:-64px -64px;
+}
+
+.sort_empty {
+	background-position:0px -96px;
+}
+
+.sort_half {
+	background-position:-32px -96px;
+}
+
+.sort_full {
+	background-position:-64px -96px;
+}
+
+.redstone_off {
+	background-position:0px 0px;
+}
+
+.redstone_on {
+	background-position:-32px 0px;
+}
+
+.redstone_pulse {
+	background-position:-64px 0px;
+}
+
+.redstone_ignore {
+	background-position:-96px 0px;
+}
+
+.stack_single {
+	background-position:0px -32px;
+}
+
+.stack_stack {
+	background-position:-32px -32px;
+}
+
+.stack_singlecraft {
+	background-position:-64px -32px;
+}
+
+.stack_craft {
+	background-position:-96px -32px;
+}
+
+.greyBox {
+	background: #C6C6C6;
+	border-radius: 15px;
+	padding: 15px;
+}
+
+.fiWnd { z-index:99;pointer-events:none;display:block;position:absolute;top:-9999px;left:-9999px; }
+.recipe{display:block;width:32px;height:32px;background:url(images/cache/recipe.png) 0px 0px no-repeat;}.recipe_itemEntropyAcc{background-position:-0px -0px;}.recipe_itemBCGear{background-position:-32px -0px;}.recipe_itemWheat{background-position:-64px -0px;}.recipe_dyeBlue{background-position:-96px -0px;}.recipe_itemGear{background-position:-128px -0px;}.recipe_itemChest{background-position:-160px -0px;}.recipe_blkCraftCpu{background-position:-192px -0px;}.recipe_materialQuartzDust{background-position:-224px -0px;}.recipe_itemGlowStone{background-position:-256px -0px;}.recipe_blkDrive{background-position:-288px -0px;}.recipe_blkPreformatter{background-position:-320px -0px;}.recipe_blkGreenCable{background-position:-352px -0px;}.recipe_itemLever{background-position:-0px -32px;}.recipe_itemPiston{background-position:-32px -32px;}.recipe_materialGoldDust{background-position:-64px -32px;}.recipe_materialSilicon{background-position:-96px -32px;}.recipe_blkCraftTerm{background-position:-128px -32px;}.recipe_materialCell{background-position:-160px -32px;}.recipe_blkOutputCable{background-position:-192px -32px;}.recipe_dyeRed{background-position:-224px -32px;}.recipe_itemQuartzSword{background-position:-256px -32px;}.recipe_blkOreQuartz{background-position:-288px -32px;}.recipe_blkAssembler{background-position:-320px -32px;}.recipe_materialStorageHousing{background-position:-352px -32px;}.recipe_materialFlour{background-position:-0px -64px;}.recipe_itemGoldIngot{background-position:-32px -64px;}.recipe_itemVibrationCata{background-position:-64px -64px;}.recipe_itemIronBars{background-position:-96px -64px;}.recipe_blkCable{background-position:-128px -64px;}.recipe_itemGoldChip{background-position:-160px -64px;}.recipe_blkYellowCable{background-position:-192px -64px;}.recipe_itemRedstoneTorch{background-position:-224px -64px;}.recipe_blkBlackCable{background-position:-256px -64px;}.recipe_blkBrownCable{background-position:-288px -64px;}.recipe_itemQuartzHoe{background-position:-320px -64px;}.recipe_itemIronIngot{background-position:-352px -64px;}.recipe_blkDarkCable{background-position:-0px -96px;}.recipe_blkController{background-position:-32px -96px;}.recipe_dyeBrown{background-position:-64px -96px;}.recipe_materialQuartzFiber{background-position:-96px -96px;}.recipe_itemPatternEnc{background-position:-128px -96px;}.recipe_itemGlass{background-position:-160px -96px;}.recipe_itemQuartzShovel{background-position:-192px -96px;}.recipe_materialCrank{background-position:-224px -96px;}.recipe_blkInterface{background-position:-256px -96px;}.recipe_materialBlock{background-position:-288px -96px;}.recipe_blkLevelEmitter{background-position:-320px -96px;}.recipe_itemWirelessTerm{background-position:-352px -96px;}.recipe_blkRedCable{background-position:-0px -128px;}.recipe_itemIce{background-position:-32px -128px;}.recipe_materialQuartz{background-position:-64px -128px;}.recipe_itemRangeBooster{background-position:-96px -128px;}.recipe_itemPatern{background-position:-128px -128px;}.recipe_blkWhiteCable{background-position:-160px -128px;}.recipe_itemQuartzPick{background-position:-192px -128px;}.recipe_itemTier2{background-position:-224px -128px;}.recipe_itemDiamond{background-position:-256px -128px;}.recipe_materialIronDust{background-position:-288px -128px;}.recipe_itemStickyPiston{background-position:-320px -128px;}.recipe_itemLava{background-position:-352px -128px;}.recipe_itemQuartzAxe{background-position:-0px -160px;}.recipe_blkContainmentWall{background-position:-32px -160px;}.recipe_dyeYellow{background-position:-64px -160px;}.recipe_itemRedstone{background-position:-96px -160px;}.recipe_blkPatternEncoder{background-position:-128px -160px;}.recipe_blkHeatVent{background-position:-160px -160px;}.recipe_dyeWhite{background-position:-192px -160px;}.recipe_dyeGreen{background-position:-224px -160px;}.recipe_blkStorageBus{background-position:-256px -160px;}.recipe_itemDiamondChip{background-position:-288px -160px;}.recipe_blkTerminal{background-position:-320px -160px;}.recipe_blkInputCable{background-position:-352px -160px;}.recipe_blkWireless{background-position:-0px -192px;}.recipe_materialWireless{background-position:-32px -192px;}.recipe_blkChest{background-position:-64px -192px;}.recipe_itemTier1{background-position:-96px -192px;}.recipe_itemTier3{background-position:-128px -192px;}.recipe_dyeBlack{background-position:-160px -192px;}.recipe_materialConvMatrix{background-position:-192px -192px;}.recipe_materialCluster{background-position:-224px -192px;}.recipe_itemStick{background-position:-256px -192px;}.recipe_blkGrinder{background-position:-288px -192px;}.recipe_itemCobble{background-position:-320px -192px;}.recipe_itemStone{background-position:-352px -192px;}.recipe_itemEnderPearl{background-position:-0px -224px;}.recipe_itemGearBC{background-position:-32px -224px;}.recipe_itemWorkbench{background-position:-64px -224px;}.recipe_itemPattern{background-position:-96px -224px;}.recipe_blkIOPort{background-position:-128px -224px;}.recipe_materialSegment{background-position:-160px -224px;}.recipe_itemQuartzKnife{background-position:-192px -224px;}.recipe_itemTier4{background-position:-224px -224px;}.recipe_materialDiamondChip{background-position:-256px -224px;}.recipe_materialDiamondChipAssembly{background-position:-288px -224px;}.recipe_materialGoldChip{background-position:-320px -224px;}.recipe_materialGoldChipAssembly{background-position:-352px -224px;}.recipe_blkCraftingMonitor{background-position:-0px -256px;}.recipe_itemQuartzWrench{background-position:-32px -256px;}.recipe_blkStorageMonitor{background-position:-64px -256px;}.recipe_blkBlueCable{background-position:-96px -256px;}.recipe_itemNetherQuartz{background-position:-128px -256px;}.recipe_blkOutputCableFuzzy{background-position:-160px -256px;}.recipe_blkCableCovered{background-position:-192px -256px;}.recipe_blkInputCableFuzzy{background-position:-224px -256px;}.recipe_blkOutputCableBasic{background-position:-256px -256px;}.recipe_blkInputCableBasic{background-position:-288px -256px;}.recipe_blkStorageBusFuzzy{background-position:-320px -256px;}.recipe_itemWool{background-position:-352px -256px;}.recipe_materialFluixCrystal{background-position:-0px -288px;}.recipe_materialFluixPearl{background-position:-32px -288px;}.recipe_materialFluixDust{background-position:-64px -288px;}.recipe_blkCertusQuartz{background-position:-96px -288px;}.recipe_materialNetherQuartzDust{background-position:-128px -288px;}.recipe_blkEnergyCell{background-position:-160px -288px;}.recipe_blkCondenser{background-position:-192px -288px;}.recipe_materialSingularity{background-position:-224px -288px;}.recipe_itemMassCannon{background-position:-256px -288px;}.recipe_materialIronNugget{background-position:-288px -288px;}.recipe_blkTransitionPlane{background-position:-320px -288px;}.recipe_blkPowerRelay{background-position:-352px -288px;}.recipe_materialMatterBall{background-position:-0px -320px;}.recipe_blkQLink{background-position:-32px -320px;}.recipe_blkQRing{background-position:-64px -320px;}.recipe_materialEnderPearlDust{background-position:-96px -320px;}.recipe_materialQESingularity{background-position:-128px -320px;}.recipe_blkQuartzGlass{background-position:-160px -320px;}.recipe_itemAnyQuartz{background-position:-192px -320px;}.recipe_blkTinyTNT{background-position:-224px -320px;}.recipe_itemGunpowder{background-position:-256px -320px;}.recipe_itemAnyQuartzDust{background-position:-288px -320px;}.recipe_blkVibQuartzGlass{background-position:-320px -320px;}.recipe_itemMemoryCard{background-position:-352px -320px;}.large{display:block;width:64px;height:64px;background:url(images/cache/large.png) 0px 0px no-repeat;}.large_itemEntropyAcc{background-position:-0px -0px;}.large_itemBCGear{background-position:-64px -0px;}.large_itemWheat{background-position:-128px -0px;}.large_dyeBlue{background-position:-192px -0px;}.large_itemGear{background-position:-256px -0px;}.large_itemChest{background-position:-320px -0px;}.large_blkCraftCpu{background-position:-384px -0px;}.large_materialQuartzDust{background-position:-448px -0px;}.large_itemGlowStone{background-position:-512px -0px;}.large_blkDrive{background-position:-576px -0px;}.large_blkPreformatter{background-position:-640px -0px;}.large_blkGreenCable{background-position:-704px -0px;}.large_itemLever{background-position:-0px -64px;}.large_itemPiston{background-position:-64px -64px;}.large_materialGoldDust{background-position:-128px -64px;}.large_materialSilicon{background-position:-192px -64px;}.large_blkCraftTerm{background-position:-256px -64px;}.large_materialCell{background-position:-320px -64px;}.large_blkOutputCable{background-position:-384px -64px;}.large_dyeRed{background-position:-448px -64px;}.large_itemQuartzSword{background-position:-512px -64px;}.large_blkOreQuartz{background-position:-576px -64px;}.large_blkAssembler{background-position:-640px -64px;}.large_materialStorageHousing{background-position:-704px -64px;}.large_materialFlour{background-position:-0px -128px;}.large_itemGoldIngot{background-position:-64px -128px;}.large_itemVibrationCata{background-position:-128px -128px;}.large_itemIronBars{background-position:-192px -128px;}.large_blkCable{background-position:-256px -128px;}.large_itemGoldChip{background-position:-320px -128px;}.large_blkYellowCable{background-position:-384px -128px;}.large_itemRedstoneTorch{background-position:-448px -128px;}.large_blkBlackCable{background-position:-512px -128px;}.large_blkBrownCable{background-position:-576px -128px;}.large_itemQuartzHoe{background-position:-640px -128px;}.large_itemIronIngot{background-position:-704px -128px;}.large_blkDarkCable{background-position:-0px -192px;}.large_blkController{background-position:-64px -192px;}.large_dyeBrown{background-position:-128px -192px;}.large_materialQuartzFiber{background-position:-192px -192px;}.large_itemPatternEnc{background-position:-256px -192px;}.large_itemGlass{background-position:-320px -192px;}.large_itemQuartzShovel{background-position:-384px -192px;}.large_materialCrank{background-position:-448px -192px;}.large_blkInterface{background-position:-512px -192px;}.large_materialBlock{background-position:-576px -192px;}.large_blkLevelEmitter{background-position:-640px -192px;}.large_itemWirelessTerm{background-position:-704px -192px;}.large_blkRedCable{background-position:-0px -256px;}.large_itemIce{background-position:-64px -256px;}.large_materialQuartz{background-position:-128px -256px;}.large_itemRangeBooster{background-position:-192px -256px;}.large_itemPatern{background-position:-256px -256px;}.large_blkWhiteCable{background-position:-320px -256px;}.large_itemQuartzPick{background-position:-384px -256px;}.large_itemTier2{background-position:-448px -256px;}.large_itemDiamond{background-position:-512px -256px;}.large_materialIronDust{background-position:-576px -256px;}.large_itemStickyPiston{background-position:-640px -256px;}.large_itemLava{background-position:-704px -256px;}.large_itemQuartzAxe{background-position:-0px -320px;}.large_blkContainmentWall{background-position:-64px -320px;}.large_dyeYellow{background-position:-128px -320px;}.large_itemRedstone{background-position:-192px -320px;}.large_blkPatternEncoder{background-position:-256px -320px;}.large_blkHeatVent{background-position:-320px -320px;}.large_dyeWhite{background-position:-384px -320px;}.large_dyeGreen{background-position:-448px -320px;}.large_blkStorageBus{background-position:-512px -320px;}.large_itemDiamondChip{background-position:-576px -320px;}.large_blkTerminal{background-position:-640px -320px;}.large_blkInputCable{background-position:-704px -320px;}.large_blkWireless{background-position:-0px -384px;}.large_materialWireless{background-position:-64px -384px;}.large_blkChest{background-position:-128px -384px;}.large_itemTier1{background-position:-192px -384px;}.large_itemTier3{background-position:-256px -384px;}.large_dyeBlack{background-position:-320px -384px;}.large_materialConvMatrix{background-position:-384px -384px;}.large_materialCluster{background-position:-448px -384px;}.large_itemStick{background-position:-512px -384px;}.large_blkGrinder{background-position:-576px -384px;}.large_itemCobble{background-position:-640px -384px;}.large_itemStone{background-position:-704px -384px;}.large_itemEnderPearl{background-position:-0px -448px;}.large_itemGearBC{background-position:-64px -448px;}.large_itemWorkbench{background-position:-128px -448px;}.large_itemPattern{background-position:-192px -448px;}.large_blkIOPort{background-position:-256px -448px;}.large_materialSegment{background-position:-320px -448px;}.large_itemQuartzKnife{background-position:-384px -448px;}.large_itemTier4{background-position:-448px -448px;}.large_materialDiamondChip{background-position:-512px -448px;}.large_materialDiamondChipAssembly{background-position:-576px -448px;}.large_materialGoldChip{background-position:-640px -448px;}.large_materialGoldChipAssembly{background-position:-704px -448px;}.large_blkCraftingMonitor{background-position:-0px -512px;}.large_itemQuartzWrench{background-position:-64px -512px;}.large_blkStorageMonitor{background-position:-128px -512px;}.large_blkBlueCable{background-position:-192px -512px;}.large_itemNetherQuartz{background-position:-256px -512px;}.large_blkOutputCableFuzzy{background-position:-320px -512px;}.large_blkCableCovered{background-position:-384px -512px;}.large_blkInputCableFuzzy{background-position:-448px -512px;}.large_blkOutputCableBasic{background-position:-512px -512px;}.large_blkInputCableBasic{background-position:-576px -512px;}.large_blkStorageBusFuzzy{background-position:-640px -512px;}.large_itemWool{background-position:-704px -512px;}.large_materialFluixCrystal{background-position:-0px -576px;}.large_materialFluixPearl{background-position:-64px -576px;}.large_materialFluixDust{background-position:-128px -576px;}.large_blkCertusQuartz{background-position:-192px -576px;}.large_materialNetherQuartzDust{background-position:-256px -576px;}.large_blkEnergyCell{background-position:-320px -576px;}.large_blkCondenser{background-position:-384px -576px;}.large_materialSingularity{background-position:-448px -576px;}.large_itemMassCannon{background-position:-512px -576px;}.large_materialIronNugget{background-position:-576px -576px;}.large_blkTransitionPlane{background-position:-640px -576px;}.large_blkPowerRelay{background-position:-704px -576px;}.large_materialMatterBall{background-position:-0px -640px;}.large_blkQLink{background-position:-64px -640px;}.large_blkQRing{background-position:-128px -640px;}.large_materialEnderPearlDust{background-position:-192px -640px;}.large_materialQESingularity{background-position:-256px -640px;}.large_blkQuartzGlass{background-position:-320px -640px;}.large_itemAnyQuartz{background-position:-384px -640px;}.large_blkTinyTNT{background-position:-448px -640px;}.large_itemGunpowder{background-position:-512px -640px;}.large_itemAnyQuartzDust{background-position:-576px -640px;}.large_blkVibQuartzGlass{background-position:-640px -640px;}.large_itemMemoryCard{background-position:-704px -640px;}
